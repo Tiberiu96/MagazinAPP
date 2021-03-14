@@ -7,7 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
-const NavBar = () => {
+const NavBar = ({totalItems}) => {
     return (
         <div>
                <AppBar position ="fixed">
@@ -16,7 +16,7 @@ const NavBar = () => {
                       <MenuIcon/>  Magazin
                     </Typography>
                     <IconButton>
-                        <Badge badgeContent={4} color="secondary">
+                        <Badge badgeContent={totalItems} color="secondary">
                             <ShoppingCartIcon/>
                         </Badge>
                     </IconButton>           
