@@ -6,13 +6,13 @@ const Product = ({products, handleAddToCart}) => {
    
     return (
          <Card style ={{maxWidth: "100%"}}>
-                <CardMedia image = {products.media.source}  style={{height: "150px"}} />
+                <CardMedia image = {products.media.source}  style={{height: "0",paddingTop:"56.25%"}} />
                 <CardContent>
                     <div style = {{display:"flex", justifyContent:"space-between"}}>
                         <Typography variant ="h6" gutterBottom>
                         {products.name}
                             </Typography>
-                        <Typography variant ="h7" g>
+                        <Typography variant ="h6" g>
                         {products.price.formatted_with_code}
                          </Typography>
                     </div>

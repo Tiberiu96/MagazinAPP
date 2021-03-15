@@ -2,6 +2,7 @@ import NavBar from './components/NavBar';
 import {useState,useEffect} from 'react';
 import Products from './components/Products';
 import Commerce from "@chec/commerce.js"
+import Cart from './components/Cart'
 
 
 
@@ -38,7 +39,9 @@ const App = () => {
     return (
         <div className ="app">
             <NavBar totalItems ={cart.total_items}/>
-            <Products handleAddToCart = {handleAddToCart} products = {products}/>
+            {/*<Products handleAddToCart = {handleAddToCart} products = {products}/>*/}
+            <Cart cart = {cart}/>
+            
         </div>
     )
 }

@@ -7,9 +7,9 @@ const Products = ({products, handleAddToCart}) => {
     return (
         <div>
             <div style ={{height: "100px"}}></div>
-            <Grid style ={{padding: "15px"}}container justify ="center" spacing ={4}>
+            <Grid style ={{padding: "35px"}} container justify ="center" spacing ={4}>
                 {products.map(itemm =>(
-                    <Grid item lg={3}>
+                    <Grid item lg={4} xm ={12}>
                         <Product id={itemm.key} products= {itemm} handleAddToCart = {handleAddToCart}/>
                     </Grid>
 

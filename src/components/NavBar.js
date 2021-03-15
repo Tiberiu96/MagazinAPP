@@ -16,7 +16,7 @@ const NavBar = ({totalItems}) => {
                       <MenuIcon/>  Magazin
                     </Typography>
                     <IconButton>
-                        <Badge badgeContent={totalItems} color="secondary">
+                        <Badge badgeContent={totalItems} color="secondary" style={{cursor:"pointer"}}>
                             <ShoppingCartIcon/>
                         </Badge>
                     </IconButton>           
