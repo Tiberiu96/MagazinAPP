@@ -6,8 +6,11 @@ import "../index.css";
 import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import {Link,useLocation} from 'react-router-dom'
+
 
 const NavBar = ({totalItems}) => {
+    const location = useLocation();
     return (
         <div>
                <AppBar position ="fixed">
@@ -15,11 +18,13 @@ const NavBar = ({totalItems}) => {
                     <Typography style ={{flex: 1}} variant = "h4">
                       <MenuIcon/>  Magazin
                     </Typography>
-                    <IconButton>
-                        <Badge badgeContent={totalItems} color="secondary" style={{cursor:"pointer"}}>
-                            <ShoppingCartIcon/>
-                        </Badge>
-                    </IconButton>           
+                    <Link to ="/cart">
+                     {location.pathname === "/" &&   <IconButton>
+                            <Badge badgeContent={totalItems} color="secondary" style={{cursor:"pointer"}}>
+                                <ShoppingCartIcon/>
+                            </Badge>
+                        </IconButton> } 
+                    </Link>         
                 </ToolBar>
            </AppBar>
         </div>

@@ -9,7 +9,7 @@ const Products = ({products, handleAddToCart}) => {
             <div style ={{height: "100px"}}></div>
             <Grid style ={{padding: "35px"}} container justify ="center" spacing ={4}>
                 {products.map(itemm =>(
-                    <Grid item lg={4} xm ={12}>
+                    <Grid item lg={3} xm ={12} key ={itemm.id}>
                         <Product id={itemm.key} products= {itemm} handleAddToCart = {handleAddToCart}/>
                     </Grid>
 
