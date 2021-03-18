@@ -31,7 +31,9 @@ const Cart = ({cart,handleUpdateCartQty,handleRemoveCart,handleEmptyCart}) => {
             <Typography variant ="h5" gutterBottom>Subtotal: {cart.subtotal.formatted} lei</Typography>
             <div>
                 <Button onClick ={handleEmptyCart} type ="button" variant="contained" color="primary">Remove Cart</Button>
+                <Link to="/checkout">
                 <Button type ="button" variant="contained" color="secondary">Checkout</Button>
+                </Link>
             </div>
 
         </div>
